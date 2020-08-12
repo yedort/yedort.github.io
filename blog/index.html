@@ -1,24 +1,15 @@
 ---
-layout: default
 title: Home
+layout: default
 div_main_id: posts
 ---
-<h2>Test content</h2>
-<div class="postinfo date">{{ site.time }}</div>
-<article class="excerpt">
-    {{ content }}
-</article>
 
-<h2>Test content</h2>
-<div class="postinfo date">{{ site.time }}</div>
-<article class="excerpt">
-    Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
-</article>
+<h1>Posts</h1>
 
-<h2>Test content</h2>
-<div class="postinfo date">{{ site.time }}</div>
-<article class="excerpt">
-    Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
-</article>
-
-{{ site.posts }}
+{% for post in site.posts %}
+    <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+    <div class="postinfo date">{{ post.time }}</div>
+    <article class="excerpt">
+        {{ post.content }}
+    </article>
+{% endfor %}
