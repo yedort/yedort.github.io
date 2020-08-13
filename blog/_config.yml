@@ -1,0 +1,20 @@
+name: "Yedort Blog"
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "default"
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      author: "Yedort"
+  -
+    scope:
+      path: "projects"
+      type: "pages"
+    values:
+      layout: "project"
