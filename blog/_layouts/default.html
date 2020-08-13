@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>{{ page.title }} | {{ site.name }}</title>
+    <title>{% if page.title != 'Home' %}{{ page.title }} | {% endif %}{{ site.name }}</title>
     <style>
       body, h1, h2, h3, h4, h5{margin:0;padding:0}
       .clear{clear:both}
@@ -38,8 +38,16 @@
       <div class="clear"></div>
     </header>
 
-    <main>
-      {{ content }}
+    <main{% if page.div_main_id != '' %} id="{{ page.div_main_id }}"{% endif %}>
+      {% if page.title == 'Home' %}
+        {{ content }}
+      {% else %}
+        <h2>{{ page.title }}</h2>
+
+        <article>
+          {{ content }}
+        </article>
+      {% endif %}
     </main>
 
     <aside>
