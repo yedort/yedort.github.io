@@ -1,8 +1,9 @@
 ---
 title: Örnek başlık
-layout: post
 ---
 
-# Örnek başlık
+Örnek yazı
 
-Örnek içerik
+# Örnek alt başlık
+
+Örnek yazı
