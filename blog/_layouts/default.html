@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>{% if page.title != 'Home' %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+    <title>{% if page.title != 'Home' %}{{ page.title }} | {% endif %}{{ site.name }}</title>
     <style>
       body, h1, h2, h3, h4, h5{margin:0;padding:0}
       .clear{clear:both}
@@ -58,7 +58,6 @@
 
     <footer>
       {{ site.name }} &copy; 2020 &#9472; Made with Jekyll on GitHub
-      <p><small>Current time: {{ site.time }}</small></p>
     </footer>
 
     <div class="clear"></div>
