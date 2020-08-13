@@ -3,7 +3,7 @@ name: "Yedort Blog"
 defaults:
   -
     scope:
-      path: "index"
+      path: ""
     values:
       layout: "default"
   -
